@@ -1,0 +1,176 @@
+# LobbyItems Plugin Configuration
+# All text supports color codes with &
+
+# ===========================================
+# COSMETIC BOX SETTINGS
+# ===========================================
+cosmetic-box:
+  # Permission required to use the cosmetic box
+  permission: "lobbyitems.cosmeticbox"
+
+  # Material of the cosmetic box item (Minecraft material name)
+  material: "ENDER_CHEST"
+
+  # Display name of the cosmetic box item
+  display-name: "&6&lCosmetic Box"
+
+  # Lore (description) of the cosmetic box item
+  lore:
+    - "&7Right-click to open"
+    - "&6Choose your lobby items!"
+    - ""
+    - "&eAvailable Items:"
+    - "&7- Grappling Hook"
+    - "&7- Double Jump"
+    - "&7- Elytra"
+
+  # Worlds where the cosmetic box can be used (empty list = all worlds)
+  use-in-worlds:
+    - "world"
+
+  # Settings for giving the box when players join
+  give-on-join:
+    # Whether to give the box on join
+    enabled: true
+
+    # Worlds where the box should be given (empty list = all worlds)
+    worlds:
+      - "world"
+
+    # Inventory slot to place the box (-1 = first available slot, 0-8 = hotbar slots)
+    slot: 8
+
+    # Whether to send a message when the box is given
+    send-message: true
+
+# ===========================================
+# GUI SETTINGS
+# ===========================================
+gui:
+  # Title of the cosmetic selection GUI
+  title: "&9&lLobby Items"
+
+  # Size of the GUI (must be multiple of 9, max 54)
+  size: 27
+
+  # Filler pane settings for each row
+  filler:
+    row-0:
+      material: "LIGHT_BLUE_STAINED_GLASS_PANE"
+    row-1:
+      material: "CYAN_STAINED_GLASS_PANE"
+    row-2:
+      material: "BLUE_STAINED_GLASS_PANE"
+
+# ===========================================
+# COSMETIC ITEMS SETTINGS
+# ===========================================
+items:
+  # Grappling Hook settings
+  grappling-hook:
+    enabled: true
+    slot: 10
+    material: "FISHING_ROD"
+    display-name: "&6Grappling Hook"
+    permission: "lobbyitems.grappling"
+    cooldown-ticks: 60
+    velocity-multiplier: 3.0
+    upward-velocity: 0.9
+    lore:
+      available:
+        - "&aClick to activate"
+        - "&7Pull yourself towards blocks!"
+      no-permission:
+        - "&cNo permission"
+
+  # Double Jump settings
+  double-jump:
+    enabled: true
+    slot: 13
+    material: "FEATHER"
+    display-name: "&6Double Jump"
+    permission: "lobbyitems.doublejump"
+    cooldown-ticks: 60
+    jump-height: 1.25
+    horizontal-boost: 2.5
+    sound: "ENTITY_ENDER_DRAGON_FLAP"
+    lore:
+      available:
+        - "&aClick to activate"
+        - "&7Launch yourself forward!"
+      no-permission:
+        - "&cNo permission"
+
+  # Elytra settings
+  elytra:
+    enabled: true
+    slot: 16
+    material: "ELYTRA"
+    display-name: "&6Elytra"
+    permission: "lobbyitems.elytra"
+    boost-duration-ticks: 100
+    boost-velocity: 1.25
+    lore:
+      available:
+        - "&aClick to activate"
+        - "&7Sneak while gliding to boost!"
+      no-permission:
+        - "&cNo permission"
+
+# ===========================================
+# COMMAND SETTINGS
+# ===========================================
+command:
+  # Worlds where the command can be used (empty list = all worlds)
+  allowed-worlds:
+    - "world"
+
+# ===========================================
+# COSMETIC FUNCTIONALITY SETTINGS
+# ===========================================
+cosmetics:
+  # Worlds where cosmetics work (empty list = all worlds)
+  allowed-worlds:
+    - "world"
+
+  # Item display names for cosmetic items
+  item-names:
+    elytra: "&bCosmetic Elytra"
+    grappling-hook: "&bCosmetic Grappling Hook"
+    double-jump: "&bCosmetic Double Jump"
+
+# ===========================================
+# SOUNDS
+# ===========================================
+sounds:
+  # Sound played on successful cosmetic activation
+  success: "ENTITY_PLAYER_LEVELUP"
+
+  # Sound played on error/no permission
+  error: "BLOCK_NOTE_BLOCK_BASS"
+
+# ===========================================
+# MESSAGES
+# ===========================================
+messages:
+  # Message when cosmetic is successfully activated
+  cosmetic-activated: "&aCosmetic activated!"
+
+  # Message when player doesn't have permission
+  no-permission: "&cYou don't have permission to use this!"
+
+  # Message when command is used by non-player
+  only-players: "&cThis command can only be executed by players!"
+
+  # Message when cosmetic box is received on join
+  box-received: "&aYou received a Cosmetic Box! Right-click to open."
+
+  # Message when trying to use in wrong world
+  wrong-world: "&cYou cannot use this in this world!"
+
+# ===========================================
+# DEBUG SETTINGS
+# ===========================================
+debug:
+  # Enable debug messages in console
+  enabled: false

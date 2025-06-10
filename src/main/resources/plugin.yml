@@ -1,0 +1,37 @@
+name: LobbyItems
+version: '1.0'
+main: net.derdernichtskann.lobbyItems.LobbyItems
+api-version: '1.20'
+author: DerDerNichtsKann
+commands:
+  cosmetics:
+    description: Opens the cosmetic box GUI
+    usage: /cosmetics
+    permission: lobbyitems.cosmeticbox
+    aliases: [cosmetic, cbox, lobbyitems]
+
+permissions:
+  lobbyitems.cosmeticbox:
+    description: Allows using the cosmetic box
+    default: true
+
+  lobbyitems.grappling:
+    description: Allows using the grappling hook
+    default: true
+
+  lobbyitems.doublejump:
+    description: Allows using double jump
+    default: op
+
+  lobbyitems.elytra:
+    description: Allows using elytra boost
+    default: op
+
+  lobbyitems.*:
+    description: All LobbyItems permissions
+    default: op
+    children:
+      lobbyitems.cosmeticbox: true
+      lobbyitems.grappling: true
+      lobbyitems.doublejump: true
+      lobbyitems.elytra: true
