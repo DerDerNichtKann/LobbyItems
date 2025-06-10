@@ -11,6 +11,7 @@ public final class LobbyItems extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+        Metrics metrics = new Metrics(this, 26146);
         saveDefaultConfig();
 
         CosmeticManager.initialize(getConfig());
