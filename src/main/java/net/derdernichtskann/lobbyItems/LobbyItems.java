@@ -29,10 +29,10 @@ public final class LobbyItems extends JavaPlugin {
 
         getCommand("cosmetics").setExecutor(command);
 
-        Bukkit.getConsoleSender().sendMessage(getConfig().getString("prefix") + "------------------------------------------");
-        Bukkit.getConsoleSender().sendMessage(getConfig().getString("prefix") + "| §6LobbyItems " + pdf.getVersion() + " by DerDerNichtsKann");
-        Bukkit.getConsoleSender().sendMessage(getConfig().getString("prefix") + "| §7Has been §2Enabled");
-        Bukkit.getConsoleSender().sendMessage(getConfig().getString("prefix") + "==========================================");
+        Bukkit.getConsoleSender().sendMessage( "------------------------------------------");
+        Bukkit.getConsoleSender().sendMessage("| §6LobbyItems " + pdf.getVersion() + " by DerDerNichtsKann");
+        Bukkit.getConsoleSender().sendMessage( "| §7Has been §2Enabled");
+        Bukkit.getConsoleSender().sendMessage("==========================================");
 
     }
 
@@ -43,9 +43,9 @@ public final class LobbyItems extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        Bukkit.getConsoleSender().sendMessage(getConfig().getString("prefix") + "==========================================");
-        Bukkit.getConsoleSender().sendMessage(getConfig().getString("prefix") + "| §6LobbyItems " + pdf.getVersion() + " by DerDerNichtsKann");
-        Bukkit.getConsoleSender().sendMessage(getConfig().getString("prefix") + "| §7Has been §cDisabled");
-        Bukkit.getConsoleSender().sendMessage(getConfig().getString("prefix") + "==========================================");
+        Bukkit.getConsoleSender().sendMessage("==========================================");
+        Bukkit.getConsoleSender().sendMessage("| §6LobbyItems " + pdf.getVersion() + " by DerDerNichtsKann");
+        Bukkit.getConsoleSender().sendMessage("| §7Has been §cDisabled");
+        Bukkit.getConsoleSender().sendMessage("==========================================");
     }
 }

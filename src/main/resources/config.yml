@@ -167,10 +167,3 @@ messages:
 
   # Message when trying to use in wrong world
   wrong-world: "&cYou cannot use this in this world!"
-
-# ===========================================
-# DEBUG SETTINGS
-# ===========================================
-debug:
-  # Enable debug messages in console
-  enabled: false
